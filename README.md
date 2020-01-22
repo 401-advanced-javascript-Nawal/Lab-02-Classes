@@ -9,6 +9,8 @@
 - [ci/cd](https://github.com/401-advanced-javascript-Nawal/Lab-02-Classes/actions) (GitHub Actions)
 
 ### Setup
+- install the needed Dependencies JEST ESLINT and use npm run test to run it 
+
 #### `.env` requirements (where applicable)
 i.e.
 - `PORT` - Port Number
