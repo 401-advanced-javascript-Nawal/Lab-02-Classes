@@ -113,5 +113,5 @@ validator.arrayValue = function (input) {
   validator.emptyArray = function (input) {
     // let obj = Object.values(input);
     if (!Object.values(input)) { return false };
-    return Object.values(input).every(value =>  value === 'object' && value.length === 0)
+    return Object.values(input).every(value =>  Array.isArray(value) && value.length === 0)
   };
