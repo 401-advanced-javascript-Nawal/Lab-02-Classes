@@ -21,3 +21,6 @@ console.log('Mazda Name :' , mazdaClass.name , '\n Mazda Drive() :' , mazdaClass
 
 const harleyClass = new VehicleClass.Motorcycle('Harley');
 console.log('\n Harley Name :' , harleyClass.name , '\n Harley wheelie() :' , harleyClass.wheelie() , '\n Harley Stop() :' , harleyClass.stop());
+
+// PART 2
+const validator = require('../validator/validator.js');

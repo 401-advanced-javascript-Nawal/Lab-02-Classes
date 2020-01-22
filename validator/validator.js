@@ -1,0 +1,70 @@
+'use strict';
+
+let validator = module.exports = {};
+
+
+/**
+ * Based on a set of rules, is the input valid?
+ * TODO: Define the rules ... how do we send them in? How do we identify?
+ * @param input
+ * @param rules
+ * @returns {boolean}
+ */
+validator.isValid = (input, rules) => {
+    return true;
+  };
+  
+  /**
+   * Is this a string?
+   * @param input
+   * @returns {boolean}
+   */
+  validator.isString = (input) => {
+    return typeof input === 'string';
+  };
+
+   /**
+   * Is this a string?
+   * @param input
+   * @returns {boolean}
+   */
+  validator.isNumber = (input) => {
+    return typeof input === 'number';
+  };
+
+   /**
+   * Is this a string?
+   * @param input
+   * @returns {boolean}
+   */
+  validator.isArrOrNot = (input) => {
+    return Array.isArray(input);
+  };
+  
+    /**
+   * Is this a string?
+   * @param input
+   * @returns {boolean}
+   */
+  validator.isObject = (input) => {
+    return typeof input === 'object';
+  };
+
+      /**
+   * Is this a string?
+   * @param input
+   * @returns {boolean}
+   */
+  validator.isBool = (input) => {
+    return typeof input === 'boolean';
+  };
+
+       /**
+   * Is this a string?
+   * @param input
+   * @returns {boolean}
+   */
+  validator.isFunct = (input) => {
+    return typeof input === 'function';
+  };
+
