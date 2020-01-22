@@ -68,3 +68,50 @@ validator.isValid = (input, rules) => {
     return typeof input === 'function';
   };
 
+
+  /** 
+ * This is Function 
+ * Is this an Object has properties at any level  ?
+ * @param input
+ * @returns {boolean}
+ */
+validator.objectLevels = function (input) {
+    let mainObj = Object.keys(input);
+    if (mainObj)
+    {
+      mainObj.every(value =>
+        {
+          return this.isObject(value);
+        })
+    }
+    return false;
+  };
+
+  /**
+ * This is Function 
+ * Is Object have A keys or Null?
+ * @param input
+ * @returns {boolean}
+ */
+validator.inputKeys = function (input) {
+    if (Object.keys(input)) { return true };
+    return false;
+  };
+
+  /**
+ * This is Function 
+ * Is Object has an array value?
+ * @param input
+ * @returns value
+ */
+validator.arrayValue = function (input) {
+    // let obj = Object.values(input);
+    if (!Object.values(input)) { return false };
+    return Object.values(input).every(value => Array.isArray(value));
+  };
+  
+  validator.emptyArray = function (input) {
+    // let obj = Object.values(input);
+    if (!Object.values(input)) { return false };
+    return Object.values(input).every(value =>  value === 'object' && value.length === 0)
+  };
