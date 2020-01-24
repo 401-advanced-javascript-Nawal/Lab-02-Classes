@@ -77,6 +77,5 @@ describe('validator module performs complex validations', () => {
     expect(validator.emptyArray(objectTest)).toBeFalsy();
   });
 
-  // TODO: Cover so, so many more cases
-
 });
+
