@@ -4,9 +4,9 @@ const VehicleConstructor = require('../vehicle-constructor.js');
 
 let types = ['Constructor'];
 
-describe('Vehicles', () => {
+describe('Vehicles Constructor', () => {
 
-  describe('Car', () => {
+  describe('Car Constructor', () => {
     
     function getCar(type) {
       switch(type) {
@@ -40,7 +40,7 @@ describe('Vehicles', () => {
 
   });
 
-  describe(`Motorcycle`, () => {
+  describe(`Motorcycle Constructor `, () => {
 
     function getMotorcycle(type) {
       switch(type) {
@@ -80,11 +80,55 @@ describe('Vehicles', () => {
 /****************************************** Vehicle Class **********************************************************/
 const VehicleClass = require('../vehicle-class.js');
 
-let types = ['Class'];
+let typesClass = ['Class'];
 
-describe('Vehicles', () => {
+describe('Vehicles Class', () => {
+
+  describe('Car Class', () => {
+
+    function getCarClass(type) {
+      switch(type) {
+      case 'Class':
+        return new VehicleClass.Car('foo');
+      default:
+        return {};
+      }
+    } // end of getCarClass function 
+
+    typesClass.forEach( type => {
+      
+      let car = getCarClass(type);
+
+      it(`${type} (Car) has 4 wheels`, () => {
+        expect(car.wheels).toEqual(4);
+      });
+
+      it(`${type} (Car) can drive`, () => {
+        expect(car.drive()).toBeTruthy();
+      });
+
+      it(`${type} (Car) can stop`, () => {
+        expect(car.stop()).toBeTruthy();
+      });
+
+    }); // end of foreach 
 
 
+  }); // End of Car Class testing 
 
+
+  describe(`Motorcycle Class `, () => {
+
+    function getMotorcycleClass(type) {
+      switch(type) {
+      case 'Class':
+        return new VehicleClass.Motorcycle('foo');
+      default:
+        return {};
+      }
+    } // end of getMotorcycleClass function 
+
+    
+  }); // End of Motorcycle Class testing 
 
 });// End of Vehicle Class 
