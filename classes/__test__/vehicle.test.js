@@ -75,4 +75,16 @@ describe('Vehicles', () => {
 
   });
 
-});
+}); // End of Vehicle Constructor 
+
+/****************************************** Vehicle Class **********************************************************/
+const VehicleClass = require('../vehicle-class.js');
+
+let types = ['Class'];
+
+describe('Vehicles', () => {
+
+
+
+
+});// End of Vehicle Class 
