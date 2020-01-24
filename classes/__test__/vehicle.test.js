@@ -128,7 +128,28 @@ describe('Vehicles Class', () => {
       }
     } // end of getMotorcycleClass function 
 
-    
+    typesClass.forEach( type => {
+      
+      let motorcycle = getMotorcycleClass(type);
+
+      it(`${type} (Car) has 4 wheels`, () => {
+        expect(motorcycle.wheels).toEqual(2);
+      });
+
+      it(`${type} (Car) can drive`, () => {
+        expect(motorcycle.drive()).toBeTruthy();
+      });
+
+      it(`${type} (Car) can stop`, () => {
+        expect(motorcycle.stop()).toBeTruthy();
+      });
+
+      it(`${type} (Motorcycle) can do a wheelie`, () => {
+        expect(motorcycle.wheelie()).toBeTruthy();
+      });
+
+    }); // end of foreach 
+
   }); // End of Motorcycle Class testing 
 
 });// End of Vehicle Class 
