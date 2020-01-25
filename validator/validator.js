@@ -54,7 +54,6 @@ class ValidObject {
 
   inputKeys(input) {
     if (Object.keys(input)) { return true };
-    return false;
   }
 
   arrayValue(input) {
