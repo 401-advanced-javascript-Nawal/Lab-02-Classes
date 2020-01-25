@@ -1,0 +1,25 @@
+{
+  "name": "Lab-02-Classes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint":"eslint**/*.js" ,
+    "test": "jest --verbose --coverage"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/401-advanced-javascript-Nawal/Lab-02-Classes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/401-advanced-javascript-Nawal/Lab-02-Classes/issues"
+  },
+  "homepage": "https://github.com/401-advanced-javascript-Nawal/Lab-02-Classes#readme",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0"
+  }
+}
